@@ -1,0 +1,31 @@
+# dependensi
+node_modules/
+
+# sesi WhatsApp & kredensial (JANGAN di-upload)
+session/
+sessions/
+auth/
+*.creds.json
+.env
+.env.*
+
+# data user & database lokal
+database/
+data/*.json
+data/shuffle/
+data/store/
+cache/
+
+# log, backup, file sementara
+logs/
+tmp/
+temp/
+backup/
+backups/
+*.log
+*.zip
+*.tar.gz
+
+# sistem
+.DS_Store
+Thumbs.db

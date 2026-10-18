@@ -1,0 +1,24 @@
+🌾 Apa aja yang di update?
+- *[MIGRATE]* folder `assets/` dihapus total. Semua gambar, video, audio, font dan template sekarang berupa URL di `config.js` bagian `assets`
+- *[MIGRATE]* file asset diambil dari link, diunduh sekali lalu di-cache otomatis (`cache/asset-cache`)
+- Daftar semua key ada di `ASSET_KEYS.md`, isi link-nya di `config.assets` (images, video, audio, fonts, templates)
+
+🍃 *[FIX]*
+- `.fakedev2`, `.fakedev3`, `.fakedev4` -> path foto default salah (`assets/image/`, harusnya `images`), sekarang pakai `images.ppKosong`
+- `.nokia`, `.ttchat`, `.fakequotes2`, `.noteig`, `.quotewindows`, `.faketele` -> font dan template diambil dari config, bukan folder lokal
+- Kode thumbnail yang dimuat tapi tidak pernah dipakai dibersihkan (rpg, jpm, fun, tools)
+
+🌿 *[REFACTOR]*
+- `src/lib/assetManager.js` -> helper baru untuk semua asset
+- `.ganti-*` -> gambar yang direply diupload otomatis ke Catbox, link barunya tersimpan di `cache/asset-overrides.json`
+- `.addmedia` -> tambah/ganti asset berdasarkan key config
+- `.delmedia` -> kosongkan URL asset
+- `.sendasset` -> lihat dan kirim asset dari URL config
+- `.backupsc` -> pertanyaan "backup assets?" dihapus, langsung backup script
+- Gambar acak `.srt` pindah ke `data/shuffle`
+- Gambar produk store pindah ke `data/store`
+
+*NOTE*:
+- Key yang URL-nya masih kosong akan dilewati (thumbnail tidak muncul)
+- Promote/demote grup kirim gambar lewat URL, jadi `images.itsukiPromote` dan `images.itsukiDemote` wajib diisi
+- Kalau sebelumnya ada isi `assets/store`, pindahkan manual ke `data/store`

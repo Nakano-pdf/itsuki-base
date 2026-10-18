@@ -1,0 +1,47 @@
+/**
+✧ Name    : itsuki
+✧ Alias   : itsukichat, ask
+✧ Category: itsukiai
+✧ Deskripsi: Chat langsung dengan Itsuki AI (memori percakapan aktif).
+**/
+
+const ai = require('../../src/lib/itsukiai')
+
+const pluginConfig = {
+    name: 'itsuki',
+    alias: ['itsukichat'],
+    category: 'itsukiai',
+    description: 'Chat langsung dengan Itsuki AI',
+    usage: '.itsuki <pesan>',
+    example: '.itsuki ceritakan tentang dirimu',
+    isOwner: false,
+    isPremium: false,
+    isGroup: false,
+    isPrivate: false,
+    cooldown: 4,
+    energi: 1,
+    isEnabled: true
+}
+
+async function handler(m, { sock }) {
+    const text = ai.cleanText((m.text || '').trim(), false)
+    if (!text) {
+        return m.reply(
+            `🍥 *ɪᴛsᴜᴋɪ ᴀɪ*\n\n` +
+            `> Ketik pesanmu untuk Itsuki~\n\n` +
+            `> ${m.prefix}itsuki <pesan>\n\n` +
+            `*ᴄᴏɴᴛᴏʜ:*\n> ${m.prefix}itsuki halo, apa kabar?`
+        )
+    }
+    try {
+        const reply = await ai.chat(m, text)
+        return m.reply(reply)
+    } catch (e) {
+        return m.reply(`🥺 ${e.message}`)
+    }
+}
+
+module.exports = {
+    config: pluginConfig,
+    handler
+}
