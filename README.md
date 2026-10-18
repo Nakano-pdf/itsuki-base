@@ -1,4 +1,6 @@
 <div align="center">
+  <img src="https://cdn.nekohime.site/file/viskkyj6.jpg" alt="Itsuki Nakano Base" width="200" height="200" style="border-radius:15px; object-fit:cover;" />
+  <br /><br />
   <h1>🌸 ITSUKI NAKANO BASE BOT ✨</h1>
   <p><strong>Versi base dari Itsuki Nakano Bot: bot WhatsApp multi-device dengan sistem plugin modular, siap dipakai sebagai pondasi.</strong></p>
 
@@ -15,7 +17,7 @@
 
 Itsuki Base Bot adalah versi ringkas dari Itsuki Nakano Bot. Sistemnya sama, tapi fitur berat dan data pribadi sudah dibuang, supaya kamu bisa langsung memasangnya dan menambah fitur sendiri.
 
-Base ini dibuat oleh **Sea (Base Bot)**, dengan dasar dari project Itsuki Nakano.
+Base ini dibuat oleh **AlwaysLennz**, dengan dasar dari project Itsuki Nakano.
 
 ## ✨ Yang Ada di Versi Base
 
@@ -198,10 +200,11 @@ Bot akan memuat plugin ini otomatis, atau bisa dengan perintah reload dari owner
 
 ## 🙏 Credits
 
--**Sea**: inspired Itsuki Nakano's project.
+- **Sea DIED (100)**: The idea giver of the project Itsuki Nakano MD 
 - **AlwaysLennz**: Creator & Owner Utama Itsuki Nakano Bot.
 - **Xyrann** dan **Qynox**: Owner.
-- **AlwaysLennz™**: Tim pengembang Botkano Bot.
+- **AlwaysLennz™**: Tim pengembang Itsuki Nakano Bot.
+
 ## 📜 Lisensi
 
 Project ini dirilis di bawah lisensi **MIT**. Lihat file [`LICENSE`](./LICENSE).
